@@ -1,7 +1,7 @@
 
 <!doctype html>
 
-<html lang="en">
+<html lang="en" ng-app="canvasExamplesApp">
 <head>
   <meta charset="utf-8">
 
@@ -10,23 +10,49 @@
   <meta name="Julia Dizhak" content="canvas examples">
 
   <link rel="stylesheet" href="static/css/styles.css?v=1.0">
+
+  <!-- SCROLLS -->
+  <!-- load bootstrap and fontawesome via CDN -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+
+  <!-- SPELLS -->
+  <!-- load angular and angular route via CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+  <script src="static/js/angular-routing.js"></script>
 </head>
 
-<body>
-  <!-- In this chapter, you learned about a new HTML element called canvas. -->
-  <!-- Using the canvas’s drawing context, we can easily draw rectangles, lines, and circles, with full control over their location, line width, color, and so on. -->
-  <h1>Canvas examples</h1>
-  <aside class="">
+<body ng-controller="examplesController">
 
-  </aside>
-  <main class="canvas">
-    <div class="item">
-      <h2>Canvas Chess Board</h2>
-      <canvas id="chess-board"></canvas>
-    </div>
+  <!-- HEADER AND NAVBAR -->
+  <header>
+      <nav class="navbar navbar-default">
+      <div class="container">
+          <div class="navbar-header">
+              <a class="navbar-brand" href="/">Angular Routing Example</a>
+          </div>
+
+          <ul class="nav navbar-nav navbar-right">
+              <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+              <li><a href="#chessboard"><i class="fa fa-shield"></i> Chessboard</a></li>
+              <li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>
+          </ul>
+      </div>
+      </nav>
+  </header>
+
+  <!-- MAIN CONTENT AND INJECTED VIEWS -->
+  <main id="main">
+
+      <!-- angular templating -->
+      <!-- this is where content will be injected -->
+      <div ng-view></div>
   </main>
 
-
   <script src="static/js/chess-board.js"></script>
+  <script type="text/javascript">
+    alert('test');
+  </script>
 </body>
 </html>
