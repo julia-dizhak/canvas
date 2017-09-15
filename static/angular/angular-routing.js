@@ -15,24 +15,10 @@ canvasExamplesApp.config(function($routeProvider) {
             templateUrl : 'pages/chessboard.html',
             controller  : 'chessboardController'
         })
-
-        // route for the contact page
-        .when('/contact', {
-            templateUrl : 'pages/contact.html',
-            controller  : 'contactController'
-        });
 });
 
 // create the controller and inject Angular's $scope
 canvasExamplesApp.controller('examplesController', function($scope) {
     // create a message to display in our view
-    $scope.message = 'Everyone come and see how good I look!';
-});
-
-canvasExamplesApp.controller('chessboardController', function($scope) {
-    //$scope.message = 'test';
-});
-
-canvasExamplesApp.controller('contactController', function($scope) {
-    $scope.message = 'Contact us! JK. This is just a demo.';
+    $scope.message = 'Play with canvas';
 });

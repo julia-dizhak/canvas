@@ -15,12 +15,6 @@
   <!-- load bootstrap and fontawesome via CDN -->
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
-
-  <!-- SPELLS -->
-  <!-- load angular and angular route via CDN -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
-  <script src="static/js/angular-routing.js"></script>
 </head>
 
 <body ng-controller="examplesController">
@@ -30,13 +24,12 @@
       <nav class="navbar navbar-default">
       <div class="container">
           <div class="navbar-header">
-              <a class="navbar-brand" href="/">Angular Routing Example</a>
+              <a class="navbar-brand" href="/">Canvas Examples</a>
           </div>
 
           <ul class="nav navbar-nav navbar-right">
               <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
               <li><a href="#chessboard"><i class="fa fa-shield"></i> Chessboard</a></li>
-              <li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>
           </ul>
       </div>
       </nav>
@@ -44,15 +37,18 @@
 
   <!-- MAIN CONTENT AND INJECTED VIEWS -->
   <main id="main">
-
-      <!-- angular templating -->
-      <!-- this is where content will be injected -->
+      <!-- angular templating, this is where content will be injected -->
       <div ng-view></div>
   </main>
 
-  <script src="static/js/chess-board.js"></script>
-  <script type="text/javascript">
-    alert('test');
-  </script>
+  <!-- SPELLS -->
+  <!-- load angular and angular route via CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+  <script src="static/angular/angular-routing.js"></script>
+
+  <script src="static/angular/chessboard.ctrl.js"></script>
+
+  <!-- <script src="static/js/chess-board.js"></script> -->
 </body>
 </html>
